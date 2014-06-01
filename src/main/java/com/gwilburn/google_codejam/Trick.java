@@ -76,11 +76,11 @@ class Trick {
         String result;
 
         // Cards may have changed location in the row instead of moving to a different row!
-        for (int iterOuter = 0; iterOuter < row1.length; iterOuter++) {
-            for (int iterInner = 0; iterInner < row2.length; iterInner++) {
-                if (row1[iterOuter] == row2[iterInner]) {
+        for (int col1 : row1) {
+            for (int col2 : row2) {
+                if (col1 == col2) {
                     numberPossibilities++;
-                    lastMatch = row1[iterOuter];
+                    lastMatch = col1;
                 }
             }
         }
